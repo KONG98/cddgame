@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_setting">
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/back"
+        android:onClick="onClickButtonBack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/imageViewBGMmusic"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/setting_bgm_m"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.190"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.274" />
+
+    <ImageView
+        android:id="@+id/imageViewBGMeffect"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/setting_bgm_e"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBGMmusic"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBGMmusic"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBGMmusic" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutBGMmusic"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBGMmusic"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBGMmusic"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBGMmusic">
+
+        <ImageView
+            android:id="@+id/imageViewMusicLeft"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/setting_bgm_left" />
+
+        <Button
+            android:id="@+id/buttonMusicLevel0"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/setting_level_0_false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMusicLeft"
+            app:layout_constraintStart_toEndOf="@+id/imageViewMusicLeft"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMusicLeft"
+            android:layout_marginStart="8dp" />
+
+        <ImageView
+            android:id="@+id/imageViewMusicProgress0To1"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/setting_bgm_progress_false"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonMusicLevel0"
+            app:layout_constraintStart_toEndOf="@+id/buttonMusicLevel0"
+            app:layout_constraintTop_toTopOf="@+id/buttonMusicLevel0" />
+
+        <Button
+            android:id="@+id/buttonMusicLevel1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/setting_level_1_false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMusicProgress0To1"
+            app:layout_constraintStart_toEndOf="@+id/imageViewMusicProgress0To1"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMusicProgress0To1" />
+
+        <ImageView
+            android:id="@+id/imageViewMusicProgress1To2"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/setting_bgm_progress_false"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonMusicLevel1"
+            app:layout_constraintStart_toEndOf="@+id/buttonMusicLevel1"
+            app:layout_constraintTop_toTopOf="@+id/buttonMusicLevel1" />
+
+        <Button
+            android:id="@+id/buttonMusicLevel2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/setting_level_2_false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMusicProgress1To2"
+            app:layout_constraintStart_toEndOf="@+id/imageViewMusicProgress1To2"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMusicProgress1To2" />
+
+        <ImageView
+            android:id="@+id/imageViewMusicProgress2To3"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/setting_bgm_progress_false"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonMusicLevel2"
+            app:layout_constraintStart_toEndOf="@+id/buttonMusicLevel2"
+            app:layout_constraintTop_toTopOf="@+id/buttonMusicLevel2" />
+
+        <Button
+            android:id="@+id/buttonMusicLevel3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/setting_level_3_false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMusicProgress2To3"
+            app:layout_constraintStart_toEndOf="@+id/imageViewMusicProgress2To3"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMusicProgress2To3" />
+
+        <ImageView
+            android:id="@+id/imageViewMusicRight"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/setting_bgm_right"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonMusicLevel3"
+            app:layout_constraintStart_toEndOf="@+id/buttonMusicLevel3"
+            app:layout_constraintTop_toTopOf="@+id/buttonMusicLevel3"
+            android:layout_marginStart="8dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutBGMeffect"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBGMeffect"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBGMeffect"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBGMeffect">
+
+        <ImageView
+            android:id="@+id/imageViewEffectLeft"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/setting_bgm_left" />
+
+        <Button
+            android:id="@+id/buttonEffectLevel0"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/setting_level_0_false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewEffectLeft"
+            app:layout_constraintStart_toEndOf="@+id/imageViewEffectLeft"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEffectLeft"
+            android:layout_marginStart="8dp" />
+
+        <ImageView
+            android:id="@+id/imageViewEffectProgress0To1"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/setting_bgm_progress_false"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonEffectLevel0"
+            app:layout_constraintStart_toEndOf="@+id/buttonEffectLevel0"
+            app:layout_constraintTop_toTopOf="@+id/buttonEffectLevel0" />
+
+        <Button
+            android:id="@+id/buttonEffectLevel1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/setting_level_1_false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewEffectProgress0To1"
+            app:layout_constraintStart_toEndOf="@+id/imageViewEffectProgress0To1"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEffectProgress0To1" />
+
+        <ImageView
+            android:id="@+id/imageViewEffectProgress1To2"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/setting_bgm_progress_false"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonEffectLevel1"
+            app:layout_constraintStart_toEndOf="@+id/buttonEffectLevel1"
+            app:layout_constraintTop_toTopOf="@+id/buttonEffectLevel1" />
+
+        <Button
+            android:id="@+id/buttonEffectLevel2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/setting_level_2_false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewEffectProgress1To2"
+            app:layout_constraintStart_toEndOf="@+id/imageViewEffectProgress1To2"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEffectProgress1To2" />
+
+        <ImageView
+            android:id="@+id/imageViewEffectProgress2To3"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:src="@drawable/setting_bgm_progress_false"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonEffectLevel2"
+            app:layout_constraintStart_toEndOf="@+id/buttonEffectLevel2"
+            app:layout_constraintTop_toTopOf="@+id/buttonEffectLevel2" />
+
+        <Button
+            android:id="@+id/buttonEffectLevel3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/setting_level_3_false"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewEffectProgress2To3"
+            app:layout_constraintStart_toEndOf="@+id/imageViewEffectProgress2To3"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEffectProgress2To3" />
+
+        <ImageView
+            android:id="@+id/imageViewEffectRight"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/setting_bgm_right"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonEffectLevel3"
+            app:layout_constraintStart_toEndOf="@+id/buttonEffectLevel3"
+            app:layout_constraintTop_toTopOf="@+id/buttonEffectLevel3"
+            android:layout_marginStart="8dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

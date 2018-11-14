@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game"
+    tools:context="com.softwaretraining.cddgame.game.GameActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+    <Button
+        android:id="@+id/buttonPlayCard"
+        android:layout_width="82dp"
+        android:layout_height="48dp"
+        android:background="@drawable/playcard_true"
+        android:onClick="onClickPlayCardButton"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.620" />
+
+    <Button
+        android:id="@+id/buttonPass"
+        android:layout_width="82dp"
+        android:layout_height="48dp"
+        android:background="@drawable/pass_true"
+        android:onClick="onClickPassButton"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.620" />
+
+    <Button
+        android:id="@+id/buttonReselect"
+        android:layout_width="82dp"
+        android:layout_height="48dp"
+        android:background="@drawable/reselect"
+        android:onClick="onClickReselectButton"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.620" />
+
+    <ImageView
+        android:id="@+id/imageViewPlayer0"
+        android:layout_width="68dp"
+        android:layout_height="70dp"
+        android:background="@drawable/player"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.906" />
+
+    <ImageView
+        android:id="@+id/imageViewPlayer3"
+        android:layout_width="68dp"
+        android:layout_height="70dp"
+        android:background="@drawable/pc1"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <ImageView
+        android:id="@+id/imageViewPlayer1"
+        android:layout_width="68dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/pc2"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.300" />
+
+    <ImageView
+        android:id="@+id/imageViewPlayer2"
+        android:layout_width="68dp"
+        android:layout_height="70dp"
+        android:background="@drawable/pc3"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.356"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonPause"
+        android:layout_width="81dp"
+        android:layout_height="70dp"
+        android:background="@drawable/pause_selector"
+        android:onClick="onClickPauseButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageViewTotalScore"
+        android:layout_width="206dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/totalscore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewTotalScore"
+        android:layout_width="65dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textAppearance="@android:style/TextAppearance.WindowTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewTotalScore"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewTotalScore"
+        app:layout_constraintTop_toTopOf="@+id/imageViewTotalScore"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageViewCardBackPlayer1"
+        android:layout_width="21dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/cardback"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameOfPlayer1" />
+
+    <TextView
+        android:id="@+id/textViewNumOfCardPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="#ffffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCardBackPlayer1"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCardBackPlayer1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCardBackPlayer1"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCardBackPlayer1"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <ImageView
+        android:id="@+id/imageViewCardBackPlayer2"
+        android:layout_width="21dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/cardback"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer2"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlayer2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameOfPlayer2" />
+
+    <TextView
+        android:id="@+id/textViewNumOfCardPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="#ffffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCardBackPlayer2"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCardBackPlayer2"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCardBackPlayer2" />
+
+    <ImageView
+        android:id="@+id/imageViewCardBackPlayer3"
+        android:layout_width="21dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/cardback"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPlayer3"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer3"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameOfPlayer3" />
+
+    <TextView
+        android:id="@+id/textViewNumOfCardPlayer3"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:text=""
+        android:textColor="#ffffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCardBackPlayer3"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCardBackPlayer3"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCardBackPlayer3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard1"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlayer0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard2"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard3"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard4"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard5"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard6"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard7"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard8"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard9"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard10"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard11"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard12"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/playerCard13"
+        android:layout_width="84dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/card"
+        android:button="@null"
+        android:checked="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/playerCard12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewNameOfPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="#ffffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer2"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlayer2"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlayer2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewNameOfPlayer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="#ffffffff"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPlayer3"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer3"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer3" />
+
+    <TextView
+        android:id="@+id/textViewNameOfPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textColor="#ffffffff"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPlayer1"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer1"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer1" />
+
+    <TextView
+        android:id="@+id/textViewNameOfPlayer0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textColor="#ffffffff"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPlayer0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer0"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer0" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutPlayedCard1"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer1"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPlayer1"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlayer1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageViewPlayer1Card1"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutPlayedCard1"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutPlayedCard1"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPlayedCard1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer1Card2"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer1Card1"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer1Card1"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer1Card1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer1Card3"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer1Card2"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer1Card2"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer1Card2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer1Card4"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer1Card3"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer1Card3"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer1Card3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer1Card5"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer1Card4"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer1Card4"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer1Card4"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutPlayedCard2"
+        android:layout_width="120dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewTotalScore"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCardBackPlayer2">
+
+        <ImageView
+            android:id="@+id/imageViewPlayer2Card1"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutPlayedCard2"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutPlayedCard2"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPlayedCard2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer2Card2"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer2Card1"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer2Card1"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer2Card1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer2Card3"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer2Card2"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer2Card2"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer2Card2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer2Card4"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer2Card3"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer2Card3"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer2Card3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer2Card5"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer2Card4"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer2Card4"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer2Card4"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutPlayedCard3"
+        android:layout_width="120dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewPlayer0"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlayer3"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlayer3"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginLeft="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewPlayer3Card1"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutPlayedCard3"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutPlayedCard3"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPlayedCard3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer3Card2"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer3Card1"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer3Card1"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer3Card1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer3Card3"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer3Card2"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer3Card2"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer3Card2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer3Card4"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer3Card3"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer3Card3"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer3Card3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer3Card5"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer3Card4"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer3Card4"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer3Card4"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutPlayedCard0"
+        android:layout_width="120dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewPlayer0"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCardBackPlayer1"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlayer0"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCardBackPlayer2"
+        app:layout_constraintVertical_bias="0.95">
+
+        <ImageView
+            android:id="@+id/imageViewPlayer0Card1"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutPlayedCard0"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayoutPlayedCard0"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPlayedCard0"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer0Card2"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer0Card1"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer0Card1"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer0Card1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer0Card3"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer0Card2"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer0Card2"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer0Card2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer0Card4"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer0Card3"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer0Card3"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer0Card3"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewPlayer0Card5"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/card"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer0Card4"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlayer0Card4"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlayer0Card4"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewGameMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/请等待游戏开始"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <ImageView
+        android:id="@+id/imageViewPass3"
+        android:layout_width="80dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/image_pass"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPlayer3"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlayer3"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlayer3" />
+
+    <ImageView
+        android:id="@+id/imageViewPass2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/image_pass"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewPlayer2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer2" />
+
+    <ImageView
+        android:id="@+id/imageViewPass1"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/image_pass"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNameOfPlayer1"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewPlayer1"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlayer1" />
+
+    <ImageView
+        android:id="@+id/imageViewPass0"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:src="@drawable/image_pass"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewCardBackPlayer2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer2" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutPause"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/cloud"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="#000000" />
+
+        <ImageView
+            android:id="@+id/popup_bg"
+            android:layout_width="234dp"
+            android:layout_height="286dp"
+            android:background="@drawable/popup_bg"
+            android:contentDescription="@string/app_name"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/popup_setting"
+            android:layout_width="148dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/popup_setting_selector"
+            android:onClick="onClickSettingButton"
+            app:layout_constraintEnd_toEndOf="@+id/popup_bg"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/popup_bg"
+            app:layout_constraintTop_toTopOf="@+id/popup_bg" />
+
+        <Button
+            android:id="@+id/popup_rank"
+            android:layout_width="148dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/popup_rank_selector"
+            android:onClick="onClickRankButton"
+            app:layout_constraintEnd_toEndOf="@+id/popup_setting"
+            app:layout_constraintTop_toBottomOf="@+id/popup_setting" />
+
+        <Button
+            android:id="@+id/popup_exit"
+            android:layout_width="148dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/popup_exit_selector"
+            android:onClick="onClickInPauseViewExitButton"
+            app:layout_constraintEnd_toEndOf="@+id/popup_rank"
+            app:layout_constraintTop_toBottomOf="@+id/popup_rank" />
+
+        <Button
+            android:id="@+id/popup_x"
+            android:layout_width="27dp"
+            android:layout_height="28dp"
+            android:background="@drawable/close_pause"
+            android:onClick="onClickClosePauseButton"
+            app:layout_constraintEnd_toEndOf="@+id/popup_bg"
+            app:layout_constraintTop_toTopOf="@+id/popup_bg" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutGameFinishScore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/imageViewGameFinishScoreBackground"
+            android:layout_width="234dp"
+            android:layout_height="286dp"
+            android:background="@drawable/popup_bg"
+            android:contentDescription="@string/app_name"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewGameScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/积分结算"
+            android:textAppearance="@android:style/TextAppearance.WindowTitle"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewGameFinishScoreBackground"
+            app:layout_constraintStart_toStartOf="@+id/imageViewGameFinishScoreBackground"
+            app:layout_constraintTop_toTopOf="@+id/imageViewGameFinishScoreBackground" />
+
+        <TextView
+            android:id="@+id/textViewScoreViewPlayer0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text=""
+            android:textColor="#ffffffff"
+            app:layout_constraintEnd_toEndOf="@+id/textViewGameScore"
+            app:layout_constraintHorizontal_bias="0.305"
+            app:layout_constraintStart_toStartOf="@+id/imageViewGameFinishScoreBackground"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGameScore" />
+
+        <TextView
+            android:id="@+id/textViewScoreViewPlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="#ffffffff"
+            app:layout_constraintEnd_toEndOf="@+id/textViewScoreViewPlayer0"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewScoreViewPlayer0"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScoreViewPlayer0" />
+
+        <TextView
+            android:id="@+id/textViewScoreViewPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="#ffffffff"
+            app:layout_constraintEnd_toEndOf="@+id/textViewScoreViewPlayer1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewScoreViewPlayer1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScoreViewPlayer1" />
+
+        <TextView
+            android:id="@+id/textViewScoreViewPlayer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="#ffffffff"
+            app:layout_constraintEnd_toEndOf="@+id/textViewScoreViewPlayer2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewScoreViewPlayer2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScoreViewPlayer2" />
+
+        <TextView
+            android:id="@+id/textViewScoreViewPlayerScore0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="#ffffffff"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewScoreViewPlayer0"
+            app:layout_constraintStart_toEndOf="@+id/textViewScoreViewPlayer0"
+            app:layout_constraintTop_toTopOf="@+id/textViewScoreViewPlayer0"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textViewScoreViewPlayerScore1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="#ffffffff"
+            app:layout_constraintEnd_toEndOf="@+id/textViewScoreViewPlayerScore0"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewScoreViewPlayerScore0"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScoreViewPlayerScore0" />
+
+        <TextView
+            android:id="@+id/textViewScoreViewPlayerScore2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="#ffffffff"
+            app:layout_constraintEnd_toEndOf="@+id/textViewScoreViewPlayerScore1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewScoreViewPlayerScore1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScoreViewPlayerScore1" />
+
+        <TextView
+            android:id="@+id/textViewScoreViewPlayerScore3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="#ffffffff"
+            app:layout_constraintEnd_toEndOf="@+id/textViewScoreViewPlayerScore2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewScoreViewPlayerScore2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewScoreViewPlayerScore2" />
+
+        <Button
+            android:id="@+id/buttonBackToWaiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:onClick="onClickBackToWaitingButton"
+            android:text="@string/返回大厅"
+            android:textColor="#ffffffff"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewGameFinishScoreBackground"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewGameFinishScoreBackground"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="@+id/imageViewGameFinishScoreBackground" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageViewListening3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/image_listen_left"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNameOfPlayer3"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlayer3"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlayer3"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/imageViewListening2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/image_listen_up"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewCardBackPlayer2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPlayer2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer2"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/imageViewListening1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/image_listen_right"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textViewNameOfPlayer1"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewPlayer1"
+        app:layout_constraintTop_toTopOf="@+id/imageViewPlayer1"
+        android:layout_marginRight="8dp" />
+
+    <Button
+        android:id="@+id/buttonSortCard"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_sort_face"
+        android:onClick="onClickSortCardsButton"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

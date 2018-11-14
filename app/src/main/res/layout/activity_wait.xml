@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_waiting">
+
+    <Button
+        android:id="@+id/buttonBackToLogin"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:onClick="onClickBackButton"
+        android:text=""
+        android:background="@drawable/btn_back_to_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonReady"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/buttonReady"
+        app:layout_constraintTop_toBottomOf="@+id/buttonReady" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:background="@drawable/popup_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.250" />
+
+    <TextView
+        android:id="@+id/textViewNumOfOnlineUser"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:background="@drawable/popup_bg"
+        android:textColor="#ffffffff"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintEnd_toEndOf="@+id/listView"
+        app:layout_constraintStart_toStartOf="@+id/listView" />
+
+    <Button
+        android:id="@+id/buttonReady"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickReadyButton"
+        android:text=""
+        android:background="@drawable/btn_ready"
+        app:layout_constraintEnd_toEndOf="@+id/listView"
+        app:layout_constraintStart_toStartOf="@+id/listView"
+        app:layout_constraintTop_toBottomOf="@+id/listView" />
+
+    <TextView
+        android:id="@+id/textViewWaitingUsername"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:gravity="center"
+        android:background="@drawable/popup_bg"
+        android:textColor="#ffffffff"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintEnd_toStartOf="@+id/listView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSetting"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/popup_setting_selector"
+        android:onClick="onClickToSettingButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/buttonRank"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:background="@drawable/popup_rank_selector"
+        android:onClick="onClickToRankButton"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/buttonSetting"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSetting"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSetting"/>
+
+</android.support.constraint.ConstraintLayout>

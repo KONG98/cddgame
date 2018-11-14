@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">锄大地</string>
+    <string name="send">send</string>
+    <string name="response">response</string>
+    <string name="r">软件开发综合实训</string>
+    <string name="软件开发综合实训">软件开发综合实训</string>
+    <string name="登录">登录</string>
+    <string name="name">Name</string>
+    <string name="注册">注册</string>
+    <string name="username">用户名</string>
+    <string name="password">登录密码</string>
+    <string name="repw">重复密码</string>
+    <string name="注册新账号">注册新账号</string>
+    <string name="用户名">用户名</string>
+    <string name="登录密码">登录密码</string>
+    <string name="返回登录界面">返回登录界面</string>
+    <string name="准备">准备</string>
+    <string name="获取测试账号">获取测试账号</string>
+    <string name="请等待游戏开始">请等待游戏开始</string>
+    <string name="返回大厅">返回大厅</string>
+    <string name="积分结算">积分结算</string>
+    <string name="设置">设置</string>
+</resources>
